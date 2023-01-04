@@ -216,7 +216,7 @@ def train(opt):
                 log.write(predicted_result_log + '\n')
 
         # save model per 1e+5 iter.
-        if (iteration + 1) % 1e+5 == 0:
+        if (iteration + 1) % 500 == 0:
             torch.save(
                 model.state_dict(), f'./drive/MyDrive/KYOWON/Clova/saved_models/{opt.exp_name}/iter_{iteration+1}.pth')
 
