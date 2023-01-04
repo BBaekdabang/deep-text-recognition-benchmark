@@ -119,7 +119,7 @@ def train(opt):
 
     """ final options """
     # print(opt)
-    with open(f'./saved_models/{opt.exp_name}/opt.txt', 'a') as opt_file:
+    with open(f'./drive/MyDrive/KYOWON/Clova/saved_models/{opt.exp_name}/opt.txt', 'a') as opt_file:
         opt_log = '------------ Options -------------\n'
         args = vars(opt)
         for k, v in args.items():
@@ -281,7 +281,7 @@ if __name__ == '__main__':
         opt.exp_name += f'-Seed{opt.manualSeed}'
         # print(opt.exp_name)
 
-    os.makedirs(f'./saved_models/{opt.exp_name}', exist_ok=True)
+    os.makedirs(f'./drive/MyDrive/KYOWON/Clova/saved_models/{opt.exp_name}', exist_ok=True)
 
     """ vocab / character number configuration """
     if opt.sensitive:
