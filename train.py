@@ -236,7 +236,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=256, help='input batch size')
     parser.add_argument('--num_iter', type=int, default=300000, help='number of iterations to train for')
     parser.add_argument('--valInterval', type=int, default=2000, help='Interval between each validation')
-    parser.add_argument('--saved_model', default='/content/drive/MyDrive/KYOWON/Clova/', help="path to model to continue training")
+    parser.add_argument('--saved_model', default='/content/drive/MyDrive/KYOWON/Clova', help="path to model to continue training")
     parser.add_argument('--FT', action='store_true', help='whether to do fine-tuning')
     parser.add_argument('--adam', action='store_true', help='Whether to use adam (default is Adadelta)')
     parser.add_argument('--lr', type=float, default=1, help='learning rate, default=1.0 for Adadelta')
