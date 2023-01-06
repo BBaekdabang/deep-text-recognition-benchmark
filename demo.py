@@ -91,6 +91,14 @@ def demo(opt):
 
                 # calculate confidence score (= multiply of pred_max_prob)
                 confidence_score = pred_max_prob.cumprod(dim=0)[-1]
+                
+                with open(opt.label_test, 'r') as f:
+                    lines = f.readlines()
+                    for line in lines:
+                        info = line.split('.png\t')
+                        file_name = info[0] + '.png'
+                        label = info[1].strip() 
+                        if file_name.split('/')[-1] == img_name.split('/')[-1]: break
 
                 print(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}')
                 log.write(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}\n')
